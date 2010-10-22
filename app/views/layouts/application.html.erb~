@@ -9,11 +9,12 @@
     <div class="container">
       <%= render 'layouts/header' %>
       <section class="round">
-      <%= title %><h3>
         <%= yield %>
       </section>
+      <%= render 'layouts/footer' %>
     </div>
   </body>
 </html>
+
 
 
