@@ -23,4 +23,12 @@ By the way, using inspect to print an object is common enough that there’s a s
 p :username
 
 
+HTML5 adds the header, nav, and section elements for divisions common to many applications. All HTML elements, including divs and the new HTML5 elements, can be assigned classes2 and ids; these are merely labels, and are useful for styling with CSS (Section 5.1.2). The main difference between classes and ids is that classes can be used multiple times on a page, but ids can only be used once.
+
+
+
+<% logo = image_tag("logo.png", :alt => "Sample App", :class => "round") %>
+  <%= link_to logo, root_path %>
+This is a little cleaner than stuffing it all into one line. It’s especially important to notice that the ERb for the variable assignment doesn’t have an equals sign; it’s just <% ... %>, because we don’t want that line inserted into the template. (Using a local variable in this manner is only one way to do it. An even cleaner way might be to define a logo helper; see Section 5.5.)
+
 

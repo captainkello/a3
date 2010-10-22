@@ -18,4 +18,11 @@ puts (1..5).to_a.inspect
 
 puts "It is working!", "It worked!".inspect
 
+By the way, using inspect to print an object is common enough that there’s a shortcut for it, the p function
+
+p :username
+
+
+HTML5 adds the header, nav, and section elements for divisions common to many applications. All HTML elements, including divs and the new HTML5 elements, can be assigned classes2 and ids; these are merely labels, and are useful for styling with CSS (Section 5.1.2). The main difference between classes and ids is that classes can be used multiple times on a page, but ids can only be used once.
+
 
