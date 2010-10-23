@@ -9,6 +9,7 @@ A3::Application.routes.draw do
   match '/contact', :to => 'pages#contact'
   match '/about',   :to => 'pages#about'
   match '/help',    :to => 'pages#help'
+  match '/a', :to => 'auctions#index'
 
 
   # The priority is based upon order of creation:

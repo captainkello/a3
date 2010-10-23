@@ -1,5 +1,8 @@
 A3::Application.routes.draw do
-  devise_for :models
+
+  resources :auctions
+
+  devise_for :users
 
   root :to => 'pages#home'
 

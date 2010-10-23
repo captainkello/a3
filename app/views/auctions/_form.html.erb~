@@ -12,6 +12,10 @@
   <% end %>
 
   <div class="field">
+    <%= f.label :adtext %><br />
+    <%= f.text_field :adtext %>
+  </div>
+  <div class="field">
     <%= f.label :adate %><br />
     <%= f.text_field :adate %>
   </div>
@@ -106,10 +110,6 @@
   <div class="field">
     <%= f.label :lfemail %><br />
     <%= f.text_field :lfemail %>
-  </div>
-    <div class="field">
-    <%= f.label :adtext %><br />
-    <%= f.text_field :adtext %>
   </div>
   <div class="actions">
     <%= f.submit %>
