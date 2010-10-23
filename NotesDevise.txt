@@ -1,0 +1,184 @@
+There’s a subtle difference between flash and flash.now. 
+
+the flash message persists for two requests: it appears on the rendered page but is still waiting for a “redirect” (i.e., a second request), and thus appears again if you click a link.
+
+When rendering rather than redirecting we use flash.now instead of flash. 
+===============================================
+
+User.find(params[:id])
+
+ (The find method knows how to convert the string "1" into the integer 1.)
+ 
+>> user = User.new
+>> user.respond_to?(:password)
+=> true
+>> user.respond_to?(:encrypted_password)
+=> false
+
+Dont forget annotate
+$ annotate
+$ rails c --sandbox
+
+
+  gem install devise
+After you install Devise and add it to your Gemfile, you need to run the generator:
+
+  rails generate devise:install
+The generator will install an initializer which describes ALL Devise’s configuration options and you MUST take a look at it. When you are done, you are ready to add Devise to any of your models using the generator:
+
+  rails generate devise MODEL
+Replace MODEL by the class name you want to add devise, like User, Admin, etc. This will create a model (if one does not exist) and configure it with default Devise modules. The generator will also create a migration file (if your ORM support them) and configure your routes. Continue reading this file to understand exactly what the generator produces and how to use it.
+
+==============================================
+We love Formtastic!   Does Rails 3.0 implement something similar?
+
+==============================================
+
+Now for the application code, which contains a trick. Actually, it contains two tricks. First, you might expect at this point that we would run a migration to add a password attribute to the User model, as we did with the name and email attributes in Listing 6.1. But this is not the case: we will store only an encrypted password in the database; for the password, we will introduce a virtual attribute (that is, an attribute not corresponding to a column in the database) using the attr_accessor keyword, much as we did with the original name and email attributes for the example user in Section 4.4.5. The password attribute will not ever be written to the database, but will exist only in memory for use in performing the password confirmation step (implemented below) and the encryption step (implemented in Section 7.1.2 and Section 7.2).
+
+The second trick is that we will not introduce a password_confirmation attribute, not even a virtual one. Instead, we will use the special validation
+
+validates :password, :confirmation => true
+
+
+which will automatically create a virtual attribute called password_confirmation, while confirming that it matches the password attribute at the same time.
+
+=======================================================================
+
+get :show
+
+and
+
+get 'show'
+
+do the same thing, but when testing the canonical REST actions (Table 6.2) I prefer to use symbols, which for some reason feel more natural in this context.15 Second, note that the value of the hash key :id, instead of being the user’s id attribute @user.id, is the user object itself:
+
+get :show, :id => @user
+We could use the code
+
+get :show, :id => @user.id
+
+to accomplish the same thing, but in this context Rails automatically converts the user object to the corresponding id.16 Using the more succinct construction
+
+get :show, :id => @user
+
+is a very common Rails idiom.
+is a very common Rails idiom.
+is a very common Rails idiom.
+is a very common Rails idiom.
+=============================================================================
+
+  372  git init
+  373  git add .
+  374  touch README
+  375  git commit -m 'first commit'
+  376  git status
+  377  git remote add origin git@github.com:captainkello/first_app.git
+  378  git push origin master
+  379  git log
+
+  390  rails new first_app
+  391  cd first_app
+  392  ls app/
+  393  ls app/controllers/
+  394  git init
+  395  git status
+  396  git add .
+  397  git status
+  398  git commit -m 'first 2'
+  399  git status
+  400  rm -rf app/controllers
+
+  402  ls app
+  403  git status
+  404  git checkout -f  # This is supposed to reset.  Works for delete, not change
+  
+  405  ls app/controllers
+  406  git status
+  407  rm app/controllers
+  408  rm -rf app/controllers/
+  409  ls app
+  410  git checkout -f
+  411  ls app
+  412  ls app/controllers
+  413  git status
+  
+  rake db:create
+  rake db:migrate
+  rake db:rollback????????
+  rake db:reset
+  
+  430  git remote add origin git@github.com:captainkello/first_app.git
+  431  git push origin master
+  432  history
+  433  heroku create 
+  434  git push heroku master
+  435  heroku open
+  436  exit
+  437  gitk  # how do you run git gui??
+
+  454  rails g scaffold Article title:string body:text published_at:datetime
+
+  457  rake db:migrate
+       rake db:rollback
+       
+  458  gitk
+  459  ls
+  460  rails g model Comment email:string comment:text article_id:integer
+ 
+  472  git merge add-comments
+  473  git status
+  474  git branch
+  475  git co -b add-app-layout
+
+  497  bundle install
+  
+  git push origin master  # abbrieviate as 
+  git push
+  git push heroku master  # abbrieviate as
+  git push heroku
+  heroku db:push
+  heroku rake db:migrate
+  
+??? heroku rake db:migrate # What does this do??
+??? heroku rake db:rollback ??  How do you rollback locally??
+  
+  rails c --- console => Not Irb !!
+  reload!    In the console .all method of the model is singular..
+  u = User.all
+  m = Micropost.all
+  
+  u = User.find(2)
+  u = User.order("name desc").first
+  u = User.order(:name).limit(10)
+  u = User.find_by_email("me@you.com")
+  
+  blocks using the .map method operate on arrays / hashes or both???
+  u.reload.name
+  u.update_attributes(:name => "Wanda", :email => "me@you.com")
+  # Once you set attributes as accessable using attr_accessable in the model, 
+  # the .update_attributes method will ONLY update those attributes.
+  
+  
+  # Child methods of has_many seem to be plural. ie: u.microposts.create()
+  u.microposts.create(:content => 'This is going to be great')
+  
+  has_many :micropostS  plural # Remember it is also the method name!!!
+  The name of the scaffold follows the convention of models, which are singular, rather than resources and controllers, which are plural. Thus, we have User instead of Users.
+  
+  mp.errors.count
+  mp.errors.full_messages
+  
+  
+  
+  git checkout -f  # Works for deleted files, not for new ones??
+
+Article.all
+articles = Article.order("name")
+Article.where("created_at <= ?", Time.now).order("name)
+Article.order("published_at desc").first
+Article.order("published_at").last
+Article.order("name").limit(10)
+
+
+Article.where
