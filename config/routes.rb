@@ -1,5 +1,7 @@
 A3::Application.routes.draw do
 
+  devise_for :users
+
   root :to => 'pages#home'
 
   match '/contact', :to => 'pages#contact'
