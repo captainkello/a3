@@ -1,5 +1,4 @@
 A3::Application.routes.draw do
-  devise_for :models
 
   root :to => 'pages#home'
 
