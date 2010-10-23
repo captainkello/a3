@@ -2,11 +2,14 @@
   <% logo = image_tag("cap.jpg", :alt => "Captain Kello", :class => "round") %>
   <%= link_to logo, root_path %>
   <nav class="round">
-    <ul>
-      <li><%= link_to "Home", root_path %></li>
-      <li><%= link_to "Help", '#' %></li>
-      <li><%= link_to "Sign in", '#' %></li>
-    </ul>
+
+    <% if user_signed_in? %>
+      Signed in as <%= current_user.email %> Not you? 
+      <%= link_to "Sign Out", destroy_user_session_path %>
+      <% else %>
+      <%= link_to "Sign Up", new_user_registration_path %> or <%= link_to "Sign In", new_user_session_path %>
+      <% end %>
+
   </nav>
 </header>
 
