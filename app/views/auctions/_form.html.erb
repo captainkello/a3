@@ -1,0 +1,117 @@
+<%= form_for(@auction) do |f| %>
+  <% if @auction.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@auction.errors.count, "error") %> prohibited this auction from being saved:</h2>
+
+      <ul>
+      <% @auction.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :adtext %><br />
+    <%= f.text_field :adtext %>
+  </div>
+  <div class="field">
+    <%= f.label :adate %><br />
+    <%= f.text_field :adate %>
+  </div>
+  <div class="field">
+    <%= f.label :aoao %><br />
+    <%= f.text_field :aoao %>
+  </div>
+  <div class="field">
+    <%= f.label :island %><br />
+    <%= f.text_field :island %>
+  </div>
+  <div class="field">
+    <%= f.label :caddress1 %><br />
+    <%= f.text_field :caddress1 %>
+  </div>
+  <div class="field">
+    <%= f.label :caddress2 %><br />
+    <%= f.text_field :caddress2 %>
+  </div>
+  <div class="field">
+    <%= f.label :ccity %><br />
+    <%= f.text_field :ccity %>
+  </div>
+  <div class="field">
+    <%= f.label :oh1date %><br />
+    <%= f.text_field :oh1date %>
+  </div>
+  <div class="field">
+    <%= f.label :oh2date %><br />
+    <%= f.text_field :oh2date %>
+  </div>
+  <div class="field">
+    <%= f.label :fs %><br />
+    <%= f.text_field :fs %>
+  </div>
+  <div class="field">
+    <%= f.label :tmk %><br />
+    <%= f.text_field :tmk %>
+  </div>
+  <div class="field">
+    <%= f.label :judicial %><br />
+    <%= f.text_field :judicial %>
+  </div>
+  <div class="field">
+    <%= f.label :ts %><br />
+    <%= f.text_field :ts %>
+  </div>
+  <div class="field">
+    <%= f.label :paddress1 %><br />
+    <%= f.text_field :paddress1 %>
+  </div>
+  <div class="field">
+    <%= f.label :paddress2 %><br />
+    <%= f.text_field :paddress2 %>
+  </div>
+  <div class="field">
+    <%= f.label :paddress3 %><br />
+    <%= f.text_field :paddress3 %>
+  </div>
+  <div class="field">
+    <%= f.label :pcity %><br />
+    <%= f.text_field :pcity %>
+  </div>
+  <div class="field">
+    <%= f.label :pstate %><br />
+    <%= f.text_field :pstate %>
+  </div>
+  <div class="field">
+    <%= f.label :pzip %><br />
+    <%= f.text_field :pzip %>
+  </div>
+  <div class="field">
+    <%= f.label :punit %><br />
+    <%= f.text_field :punit %>
+  </div>
+  <div class="field">
+    <%= f.label :lender %><br />
+    <%= f.text_field :lender %>
+  </div>
+  <div class="field">
+    <%= f.label :lfname %><br />
+    <%= f.text_field :lfname %>
+  </div>
+  <div class="field">
+    <%= f.label :lfcontact %><br />
+    <%= f.text_field :lfcontact %>
+  </div>
+  <div class="field">
+    <%= f.label :lfphone %><br />
+    <%= f.text_field :lfphone %>
+  </div>
+  <div class="field">
+    <%= f.label :lfemail %><br />
+    <%= f.text_field :lfemail %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

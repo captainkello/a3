@@ -1,0 +1,55 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  adtext: 
+  adate: 
+  aoao: 
+  island: 
+  caddress1: 
+  caddress2: 
+  ccity: 
+  oh1date: 
+  oh2date: 
+  fs: 
+  tmk: 
+  judicial: 
+  ts: 
+  paddress1: 
+  paddress2: 
+  paddress3: 
+  pcity: 
+  pstate: 
+  pzip: 
+  punit: 
+  lender: 
+  lfname: 
+  lfcontact: 
+  lfphone: 
+  lfemail: MyString
+
+two:
+  adtext: 
+  adate: 
+  aoao: 
+  island: 
+  caddress1: 
+  caddress2: 
+  ccity: 
+  oh1date: 
+  oh2date: 
+  fs: 
+  tmk: 
+  judicial: 
+  ts: 
+  paddress1: 
+  paddress2: 
+  paddress3: 
+  pcity: 
+  pstate: 
+  pzip: 
+  punit: 
+  lender: 
+  lfname: 
+  lfcontact: 
+  lfphone: 
+  lfemail: MyString

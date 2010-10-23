@@ -10,7 +10,37 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101023000832) do
+ActiveRecord::Schema.define(:version => 20101023005811) do
+
+  create_table "auctions", :force => true do |t|
+    t.text     "adtext"
+    t.date     "adate"
+    t.string   "aoao"
+    t.string   "island"
+    t.string   "caddress1"
+    t.string   "caddress2"
+    t.string   "ccity"
+    t.datetime "oh1date"
+    t.datetime "oh2date"
+    t.string   "fs"
+    t.string   "tmk"
+    t.string   "judicial"
+    t.string   "ts"
+    t.string   "paddress1"
+    t.string   "paddress2"
+    t.string   "paddress3"
+    t.string   "pcity"
+    t.string   "pstate"
+    t.string   "pzip"
+    t.string   "punit"
+    t.string   "lender"
+    t.string   "lfname"
+    t.string   "lfcontact"
+    t.string   "lfphone"
+    t.string   "lfemail"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email",                               :default => "", :null => false

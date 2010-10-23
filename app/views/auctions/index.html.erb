@@ -1,0 +1,71 @@
+<h1>Listing auctions</h1>
+
+<table>
+  <tr>
+    <th>Adtext</th>
+    <th>Adate</th>
+    <th>Aoao</th>
+    <th>Island</th>
+    <th>Caddress1</th>
+    <th>Caddress2</th>
+    <th>Ccity</th>
+    <th>Oh1date</th>
+    <th>Oh2date</th>
+    <th>Fs</th>
+    <th>Tmk</th>
+    <th>Judicial</th>
+    <th>Ts</th>
+    <th>Paddress1</th>
+    <th>Paddress2</th>
+    <th>Paddress3</th>
+    <th>Pcity</th>
+    <th>Pstate</th>
+    <th>Pzip</th>
+    <th>Punit</th>
+    <th>Lender</th>
+    <th>Lfname</th>
+    <th>Lfcontact</th>
+    <th>Lfphone</th>
+    <th>Lfemail</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @auctions.each do |auction| %>
+  <tr>
+    <td><%= auction.adtext %></td>
+    <td><%= auction.adate %></td>
+    <td><%= auction.aoao %></td>
+    <td><%= auction.island %></td>
+    <td><%= auction.caddress1 %></td>
+    <td><%= auction.caddress2 %></td>
+    <td><%= auction.ccity %></td>
+    <td><%= auction.oh1date %></td>
+    <td><%= auction.oh2date %></td>
+    <td><%= auction.fs %></td>
+    <td><%= auction.tmk %></td>
+    <td><%= auction.judicial %></td>
+    <td><%= auction.ts %></td>
+    <td><%= auction.paddress1 %></td>
+    <td><%= auction.paddress2 %></td>
+    <td><%= auction.paddress3 %></td>
+    <td><%= auction.pcity %></td>
+    <td><%= auction.pstate %></td>
+    <td><%= auction.pzip %></td>
+    <td><%= auction.punit %></td>
+    <td><%= auction.lender %></td>
+    <td><%= auction.lfname %></td>
+    <td><%= auction.lfcontact %></td>
+    <td><%= auction.lfphone %></td>
+    <td><%= auction.lfemail %></td>
+    <td><%= link_to 'Show', auction %></td>
+    <td><%= link_to 'Edit', edit_auction_path(auction) %></td>
+    <td><%= link_to 'Destroy', auction, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Auction', new_auction_path %>
