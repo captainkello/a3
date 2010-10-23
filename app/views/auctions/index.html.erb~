@@ -2,9 +2,7 @@
 
 <table>
   <tr>
-    <th></th>
-    <th></th>
-    <th></th>
+
     <th>Adate</th>
     <th>Aoao</th>
     <th>Island</th>
@@ -30,14 +28,14 @@
     <th>Lfphone</th>
     <th>Lfemail</th>
     <th>Adtext</th>
-
+    <th></th>
+    <th></th>
+    <th></th>
   </tr>
 
 <% @auctions.each do |auction| %>
   <tr>
-    <td><%= link_to 'Show', auction %></td>
-    <td><%= link_to 'Edit', edit_auction_path(auction) %></td>
-    <td><%= link_to 'Destroy', auction, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= auction.adtext %></td>
     <td><%= auction.adate %></td>
     <td><%= auction.aoao %></td>
     <td><%= auction.island %></td>
@@ -62,8 +60,9 @@
     <td><%= auction.lfcontact %></td>
     <td><%= auction.lfphone %></td>
     <td><%= auction.lfemail %></td>
-    <td><%= auction.adtext %></td>
-    
+    <td><%= link_to 'Show', auction %></td>
+    <td><%= link_to 'Edit', edit_auction_path(auction) %></td>
+    <td><%= link_to 'Destroy', auction, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
